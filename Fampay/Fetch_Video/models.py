@@ -13,6 +13,7 @@ class Video(models.Model):
     thumbnail = models.TextField(blank = True)
     channelId = models.CharField(max_length = 100)
 
-Class Channel(models.Model):
-    channelId = models.CharField(db_index=True, max_length = 100)
+class Channel(models.Model):
+    channelId = models.CharField(primary_key = True,db_index=True, max_length = 100)
     channelTitle = models.TextField()
+
