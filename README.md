@@ -9,7 +9,7 @@
 - redis-server 
 
 ```
-cd fampay
+cd Fampay
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
@@ -20,7 +20,7 @@ python3 manage.py migrate
 
 **Celery Worker**
 
-`celery -A fampay worker --beat -S django -l info`
+`celery -A Fampay worker --beat -S django -l info`
 
 **Start Django Server**
 
