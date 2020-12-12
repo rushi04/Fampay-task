@@ -1,0 +1,23 @@
+{% extends 'Fampay/base.html' %}
+{% block body %}
+    {% for video in videos %}
+        <div class="card m-5">
+            <div class="card-header">{{ video.title }}</div>
+            <div class="card-body">
+                
+                <div class="card-text d-inline">{{ video.description }}</div>
+                <a href="https://www.youtube.com/watch?v={{ video.videoId }}" target="_blank"><img class="float-right" src="{{ video.thumbnail }}"></a>
+                <div>Channel - {{ video.channelId }}</div>
+                <br>
+                <div class="float-left">{{ video.publishedAt }}</div>
+            </div>
+        </div>
+
+    {%  endfor %}
+    {% if has_previous %}
+        <div><a class="btn btn-dark m-1 float-left" type="button" id="loadprevious" href="?page={{ prev_page }}">Load Previous</a></div>
+    {% endif %}
+    {% if has_next %}
+        <div><a class="btn btn-dark m-1 float-right" type="button" id="loadnext" href="?page={{ next_page }}">Load More Posts</a></div>
+    {% endif %}
+{% endblock %}
