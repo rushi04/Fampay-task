@@ -88,9 +88,9 @@ print(env("DATABASE_PASSWORD"))
 DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": "fampay",
-            "USER": "rushi04",
-            "PASSWORD": "fampay123",
+            "NAME": "",
+            "USER": "",
+            "PASSWORD": "",
         }
     }
 
@@ -132,4 +132,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-API_KEYS = ['AIzaSyBqATL67iz9U7UBIxqUgEcyfwbAJ7KznEY']
+API_KEYS = []
