@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Video
 # Pagination for lazy loading
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from .filters import VideoFilter
 
 # index page get api
 #
@@ -15,7 +15,7 @@ def index(request):
     if request.method == "GET":
         page = request.GET.get('page')
         all_videos = Video.objects.all()
-        results_per_page = 5
+        results_per_page = 6
         paginator = Paginator(all_videos, results_per_page)
         try:
             current_page = page
